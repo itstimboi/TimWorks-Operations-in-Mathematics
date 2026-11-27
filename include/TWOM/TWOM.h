@@ -36,13 +36,13 @@ TWOM_Vector2d TWOM_Vector2d_Subtract(
 
 TWOM_Vector2d TWOM_Vector2d_Scale(
     TWOM_Vector2d vector,
-    float scalar);
+    double scalar);
 
-float TWOM_Vector2d_Dot(
+double TWOM_Vector2d_Dot(
     TWOM_Vector2d a,
     TWOM_Vector2d b);
 
-float TWOM_Vector2d_Length(
+double TWOM_Vector2d_Length(
     TWOM_Vector2d vector);
 
 TWOM_Vector2d TWOM_Vector2d_Normalize(
@@ -92,13 +92,13 @@ TWOM_Vector2i TWOM_Vector2i_Subtract(
 
 TWOM_Vector2i TWOM_Vector2i_Scale(
     TWOM_Vector2i vector,
-    float scalar);
+    int scalar);
 
-float TWOM_Vector2i_Dot(
+int TWOM_Vector2i_Dot(
     TWOM_Vector2i a,
     TWOM_Vector2i b);
 
-float TWOM_Vector2i_Length(
+int TWOM_Vector2i_Length(
     TWOM_Vector2i vector);
 
 TWOM_Vector2i TWOM_Vector2i_Normalize(
@@ -229,6 +229,75 @@ double TWOM_Ceild(double a);
 float TWOM_Ceilf(float a);
 
 /*
+         ___     _,.---._                 
+  .-._ .'=.'\  ,-.' , -  `.   _,..---._   
+ /==/ \|==|  |/==/_,  ,  - \/==/,   -  \  
+ |==|,|  / - |==|   .=.     |==|   _   _\ 
+ |==|  \/  , |==|_ : ;=:  - |==|  .=.   | 
+ |==|- ,   _ |==| , '='     |==|,|   | -| 
+ |==| _ /\   |\==\ -    ,_ /|==|  '='   / 
+ /==/  / / , / '.='. -   .' |==|-,   _`/  
+ `--`./  `--`    `--`--''   `-.`.____.'   
+
+            TWOM - MOD
+*/
+
+double TWOM_Modd(double a, double b);
+float  TWOM_Modf(float a, float b);
+int    TWOM_Modi(int a, int b);
+
+
+/*
+         ___   .=-.-..-._         
+  .-._ .'=.'\ /==/_ /==/ \  .-._  
+ /==/ \|==|  |==|, ||==|, \/ /, / 
+ |==|,|  / - |==|  ||==|-  \|  |  
+ |==|  \/  , |==|- ||==| ,  | -|  
+ |==|- ,   _ |==| ,||==| -   _ |  
+ |==| _ /\   |==|- ||==|  /\ , |  
+ /==/  / / , /==/. //==/, | |- |  
+ `--`./  `--``--`-` `--`./  `--`  
+
+            TWOM - MIN
+*/
+
+double TWOM_Mind(double a, double b);
+float  TWOM_Minf(float a, float b);
+int    TWOM_Mini(int a, int b);
+
+
+/*
+*/
+
+double TWOM_Maxd(double a, double b);
+float  TWOM_Maxf(float a, float b);
+int    TWOM_Maxi(int a, int b);
+
+
+/*
+*/
+
+double TWOM_Clampd(double value, double min, double max);
+float  TWOM_Clampf(float value, float min, float max);
+int    TWOM_Clampi(int value, int min, int max);
+
+
+/*
+*/
+
+double TWOM_Lerpd(double a, double b, double t);
+float  TWOM_Lerpf(float a, float b, float t);
+int    TWOM_Lerpi(int a, int b, int t);
+
+
+/*
+*/
+
+int TWOM_Signd(double a);
+int TWOM_Signf(float a);
+int TWOM_Signi(int a);
+
+/*
                 _,.---._                 .-._                     .=-.-..-._            _,---.   
   .-.,.---.   ,-.' , -  `.  .--.-. .-.-./==/ \  .-._  _,..---._  /==/_ /==/ \  .-._ _.='.'-,  \  
  /==/  `   \ /==/_,  ,  - \/==/ -|/=/  ||==|, \/ /, /==/,   -  \|==|, ||==|, \/ /, /==.'-     /  
@@ -259,9 +328,9 @@ float TWOM_RoundToNearestIntf(float a);
             TWOM - ABS
 */
 
-double TWOM_ABSd(double a);
-float TWOM_ABSf(float a);
-int TWOM_ABSi(int a);
+double TWOM_Absd(double a);
+float TWOM_Absf(float a);
+int TWOM_Absi(int a);
 
 /*
    ,-,--.    _,.---._                 ,--.--------.  

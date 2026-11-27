@@ -284,13 +284,13 @@ TWOM_Vector2i TWOM_Vector2i_Normalize(
 
     if (length == 0.0)
     {
-        result.x = 0.0f;
-        result.y = 0.0f;
+        result.x = 0;
+        result.y = 0;
         return result;
     }
 
-    result.x = (float)((double)vector.x / length);
-    result.y = (float)((double)vector.y / length);
+    result.x = (int)((double)vector.x / length);
+    result.y = (int)((double)vector.y / length);
 
     return result;
 }

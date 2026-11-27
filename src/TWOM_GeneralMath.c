@@ -45,6 +45,69 @@ float TWOM_Ceilf(float a)
     return (float)ceil((double)a);
 }
 
+double TWOM_Modd(double a, double b)
+{
+    return fmod(a, b);
+}
+
+/*
+         ___     _,.---._                 
+  .-._ .'=.'\  ,-.' , -  `.   _,..---._   
+ /==/ \|==|  |/==/_,  ,  - \/==/,   -  \  
+ |==|,|  / - |==|   .=.     |==|   _   _\ 
+ |==|  \/  , |==|_ : ;=:  - |==|  .=.   | 
+ |==|- ,   _ |==| , '='     |==|,|   | -| 
+ |==| _ /\   |\==\ -    ,_ /|==|  '='   / 
+ /==/  / / , / '.='. -   .' |==|-,   _`/  
+ `--`./  `--`    `--`--''   `-.`.____.'   
+ */
+
+float TWOM_Modf(float a, float b)
+{
+    return (float)fmod((double)a, (double)b);
+}
+
+int TWOM_Modi(int a, int b)
+{
+    return a % b;
+}
+
+/*
+         ___   .=-.-..-._         
+  .-._ .'=.'\ /==/_ /==/ \  .-._  
+ /==/ \|==|  |==|, ||==|, \/ /, / 
+ |==|,|  / - |==|  ||==|-  \|  |  
+ |==|  \/  , |==|- ||==| ,  | -|  
+ |==|- ,   _ |==| ,||==| -   _ |  
+ |==| _ /\   |==|- ||==|  /\ , |  
+ /==/  / / , /==/. //==/, | |- |  
+ `--`./  `--``--`-` `--`./  `--`  
+*/
+
+double TWOM_Mind(double a, double b)
+{
+    if (a < b)
+        return a;
+
+    return b;
+}
+
+float TWOM_Minf(float a, float b)
+{
+    if (a < b)
+        return a;
+
+    return b;
+}
+
+int TWOM_Mini(int a, int b)
+{
+    if (a < b)
+        return a;
+
+    return b;
+}
+
 /*
                 _,.---._                 .-._                     .=-.-..-._            _,---.   
   .-.,.---.   ,-.' , -  `.  .--.-. .-.-./==/ \  .-._  _,..---._  /==/_ /==/ \  .-._ _.='.'-,  \  
@@ -85,17 +148,17 @@ float TWOM_RoundToNearestIntf(float a)
  `--`        `-._`.___,'  `--`---'  
 */
 
-double TWOM_ABSd(double a)
+double TWOM_Absd(double a)
 {
     return fabs(a);
 }
 
-float TWOM_ABSf(float a)
+float TWOM_Absf(float a)
 {
     return fabsf(a);
 }
 
-int TWOM_ABSi(int a)
+int TWOM_Absi(int a)
 {
     return abs(a);
 }
@@ -113,17 +176,17 @@ int TWOM_ABSi(int a)
 
 */
 
-double TWOM_SQRTd(double a)
+double TWOM_Sqrtd(double a)
 {
     return sqrt(a);
 }
 
-float TWOM_SQRTf(float a)
+float TWOM_Sqrtf(float a)
 {
     return (float)sqrt(a);
 }
 
-int TWOM_SQRTi(int a)
+int TWOM_Sqrti(int a)
 {
     return TWOM_RoundToNearestIntd(sqrt(a));
 }
